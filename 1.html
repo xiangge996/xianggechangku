@@ -1,0 +1,37 @@
+<html>
+<head>
+</head>
+<body>
+	<input type="text" value="用户" style="">
+	<input type="text" value="密码" style="">
+	<style>
+		
+	</style>
+	<script>
+		var text1 = document.querySelector('input');
+		var text2 = document.querySelectorAll('input')[1];
+		text1.onfocus = function(){
+			if(text1.value === '用户'){
+				text1.value = '';
+				text1.style.outlineColor = 'pink';
+			}
+		}
+		text2.onfocus = function(){
+			if(text2.value === '密码'){
+				text2.value = '';
+				text2.style.outlineColor = 'pink';
+			}
+		}
+		text1.onblur = function(){
+			if(text1.value === ''){
+				text1.value = '用户';
+			}
+		}
+		text2.onblur = function(){
+			if(text2.value === ''){
+				text2.value = '密码';
+			}
+		}
+		console.log(text2);
+	</script>
+</body>

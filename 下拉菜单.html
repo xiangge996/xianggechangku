@@ -1,0 +1,46 @@
+<html>
+	<head></head>
+	<style>
+		.xiao1{
+			width:100px;
+			height:100px;
+			background:red;
+			margin-top:10px;
+			display:none;
+		}
+		.xiao2{
+			width:100px;
+			height:100px;
+			background:red;
+			margin-top:10px;
+			display:black;
+		}
+		.da{
+			width:100px;
+			height:100px;
+			background:green;
+		}
+	</style>
+	<body>
+		<div class='da'></div>
+		<div class='xiao1'></div>
+		<div class='xiao1'></div>
+		<div class='xiao1'></div>
+		<div class='xiao1'></div>
+		<script>
+			var da = document.querySelector('div');
+			var xiao1 = document.querySelectorAll('.xiao1');
+			
+			da.onmouseover = function(){
+					for(var i=0;i<xiao1.length;i++){
+						xiao1[i].className = 'xiao2';
+					}
+			}
+			da.onmouseout = function(){
+					for(var i=0;i<xiao1.length;i++){
+						xiao1[i].className = 'xiao1';
+					}
+			}
+		</script>
+	</body>
+</html>
